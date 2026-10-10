@@ -52,13 +52,6 @@ export default function Login() {
     }
   };
 
-  const handleQuickFill = () => {
-    setEmail('demo.customer@petzone.com');
-    setPassword('petzone123');
-    setErrors({});
-    setApiError(null);
-  };
-
   return (
     <AuthLayout title="Log In">
       {flashMessage && (
@@ -75,18 +68,6 @@ export default function Login() {
         </div>
       )}
 
-      {/* Auto-fill Button */}
-      <div className="p-2.5 rounded-2xl bg-[#FAF5EE] border border-[#E8E2D9] flex items-center justify-between">
-        <span className="text-xs font-extrabold text-[#2C221E]">Demo Credentials</span>
-        <button
-          type="button"
-          onClick={handleQuickFill}
-          className="px-3 py-1 bg-[#E08838] text-white text-xs font-bold rounded-full hover:bg-[#C87428]"
-        >
-          Auto-fill
-        </button>
-      </div>
-
       <form onSubmit={handleSubmit} className="space-y-4">
         
         <div>
@@ -96,7 +77,7 @@ export default function Login() {
           <div className="relative">
             <input
               type="email"
-              placeholder="demo.customer@petzone.com"
+              placeholder="name@domain.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 text-sm bg-[#FAF5EE] border border-[#E8E2D9] rounded-2xl focus:bg-white focus:outline-none focus:border-[#E08838]"
