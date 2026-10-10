@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  body {
+    background-color: #F6F2EC;
+    color: #2C221E;
+    overflow-x: hidden;
+    cursor: default;
+    user-select: none; /* Disables accidental text selection cursor on click */
+  }
+
+  /* Allow normal text editing ONLY inside input fields & textareas */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  textarea {
+    cursor: text !important;
+    user-select: text !important;
+  }
+
+  /* Make all links, buttons, and interactive cards display a clean pointer hand */
+  a, 
+  button, 
+  [role="button"], 
+  input[type="submit"], 
+  input[type="checkbox"], 
+  select {
+    cursor: pointer !important;
+  }
+}
+
+/* Custom Paw Pill Button Styling */
+.btn-orange-paw {
+  background-color: #E08838;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  font-weight: 800;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex;
+  items-center: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-orange-paw:hover {
+  background-color: #C87428;
+  transform: translateY(-1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6F2EC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E08838;
+  border-radius: 9999px;
+}
